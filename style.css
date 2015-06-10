@@ -1,0 +1,12 @@
+body {
+	font-family:arial;
+}
+
+.secondary /* The dot means I'm looking for a class. Classes are more specific than selectors.*/{
+	background:#777;
+}
+
+#content /*Each page can only have on id.*/{
+	background:#FFFFFF;
+	width:350px;
+}
