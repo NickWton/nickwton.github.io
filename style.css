@@ -1,12 +1,130 @@
 body {
 	font-family:arial;
-}
-
-.secondary /* The dot means I'm looking for a class. Classes are more specific than selectors.*/{
-	background:#777;
+	padding:0px;
+	border:0px;
+	margin:0px;
+	margin-left:30px;
+	background:url("background1.jpg");
+	background-size:cover;
+	background-scroll:scroll;
 }
 
 #content /*Each page can only have on id.*/{
-	background:#FFFFFF;
-	width:350px;
+webkit-border-radius: 5px;
+moz-border-radius: 5px;
+border-radius: 5px;
+padding:15px;
+border: 0px solid black;
+margin-top:50px;
+background-color:rgba(255,255,255,0.6);
+width:270px;
+}
+
+a{
+text-decoration:none;
+font-size:16px;
+color:#000000;
+}
+
+@font-face {      /*copy and pasted from socicon.com/how.php*/
+    font-family: 'socicon';
+    src: url('socicon/font/socicon.eot');
+    src: url('socicon/font/socicon.eot?#iefix') format('embedded-opentype'),
+         url('socicon/font/socicon.woff') format('woff'),
+         url('socicon/font/socicon.ttf') format('truetype'),
+         url('socicon/font/socicon.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: initial;
+}
+
+h2 {
+	font-size: 42px;
+	line-height:48px;
+	letter-spacing: -1px;
+	padding:0px;
+	border:0px;
+	margin:0px;
+}
+
+h3 {
+	
+}
+
+.soc {
+	overflow:hidden;
+	margin:0; padding:0;
+	list-style:none;
+}
+
+.soc li {
+	display:inline-block;
+	*display:inline;
+}
+
+.soc li a {
+	font-family:"socicon"!important;
+	font-style:normal;
+	font-weight:normal;
+    -webkit-font-smoothing:anti-aliased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+
+     -o-transition:.1s;
+    -ms-transition:.1s;
+    -moz-transition:.1s;
+    -webkit-transition:.1s;
+    transition:.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    overflow:hidden;
+    text-decoration:none;
+    text-align:center;
+    display:block;
+    position: relative;
+    z-index: 1;
+    width: 61px;
+    height:41px;
+    line-height:41px;
+    font-size: 41px;
+    /*-webkit-border-radius:60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    margin-right: 0px;*/
+    color: black;
+}
+a:hover /*mouse over link*/{
+	color:white !important;
+	/*z-index:2;*/
+}
+.soc-email2:before /* The dot means I'm looking for a class. Classes are more specific than selectors.*/{
+    content:'@';
+}
+.soc-soundcloud:before {
+    content:'n';
+}
+.soc-facebook:before {
+    content:'b';
+}
+.soc-linkedin:before {
+    content:'j';
+}
+.soc-skype:before {
+	content:"g";
+}
+.soc-reddit:before {
+	content:"C";
+}
+.soc-steam:before {
+	content:"X";
+}
+.soc-instagram:before {
+	content:"x";
 }
