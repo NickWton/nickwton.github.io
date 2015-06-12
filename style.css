@@ -5,8 +5,9 @@ body {
 	margin:0px;
 	margin-left:30px;
 	background:url("background1.jpg");
-	background-size:auto;
-	background-scroll:scroll;
+    background-repeat:no-repeat;
+	background-size:contain;
+    background-position:left;
 }
 
 #content /*Each page can only have on id.*/{
