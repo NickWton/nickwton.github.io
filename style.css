@@ -6,6 +6,7 @@ body {
 	margin-left:30px;
 	background:url("background1.jpg");
     background-repeat:no-repeat;
+    width:100%;
 	background-size:contain;
     background-position:left;
 }
