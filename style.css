@@ -6,7 +6,7 @@ body {
 	margin-left:30px;
     background:url("background1.jpg");
     background-repeat:no-repeat;
-    background-size:100%;
+    background-size:auto 100%;
     background-position:left;
 }
 
