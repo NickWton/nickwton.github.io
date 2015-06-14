@@ -52,11 +52,12 @@ h3 {
 	
 }
 p {hidden}
-@media only screen and (min-width=1360px) and (min-device-aspect-ratio=1){
+@media only screen and (min-width:1360px) and (min-device-aspect-ratio:1){
     p {
     font-family: "Verdana", Geneva, sans-serif;
-    font-size: 200%;
-    position:relative;
+    font-size: 30px;
+    font-color:white;
+    position:absolute;
     bottom:50px;
     left:50px;
     }
