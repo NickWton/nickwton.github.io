@@ -27,7 +27,7 @@ font-size:16px;
 color:#000000;
 }
 
-@font-face {      /*copy and pasted from socicon.com/how.php*/
+@font-face {      /*copy and pasted from socicon.com/how.php*/ /*This rule allows web designs to go beyond web-safe fonts.*/
     font-family: 'socicon';
     src: url('socicon/font/socicon.eot');
     src: url('socicon/font/socicon.eot?#iefix') format('embedded-opentype'),
@@ -50,6 +50,16 @@ h2 {
 
 h3 {
 	
+}
+p {hidden}
+@media only screen and (min-width=1360px) and (min-device-aspect-ratio=1){
+    p {
+    font-family: "Verdana", Geneva, sans-serif;
+    font-size: 200%;
+    position:relative;
+    bottom:50px;
+    left:50px;
+    }
 }
 
 .soc {
