@@ -11,13 +11,10 @@ body {
 }
 
 #content /*Each page can only have on id.*/{
-webkit-border-radius: 5px;
-moz-border-radius: 5px;
-border-radius: 5px;
 padding:15px;
 border: 0px solid black;
-margin-top:50px;
-margin-bottom:50px;
+margin-top:40px;
+margin-bottom:40px;
 background-color:rgba(255,255,255,0.6);
 width:270px;
 }
