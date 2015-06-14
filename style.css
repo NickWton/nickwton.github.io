@@ -52,15 +52,10 @@ h3 {
 	
 }
 
-p {
-    font-family: "Verdana", Geneva, sans-serif;
-    font-size: 30px;
-    font-color:white;
-    position:absolute;
-    bottom:50px;
-    left:50px;
+li {
+    padding-bottom:3px;
+    padding-top:3px;
 }
-
 .soc {
 	overflow:hidden;
 	margin:0; padding:0;
