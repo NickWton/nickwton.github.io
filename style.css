@@ -17,7 +17,7 @@ border-radius: 5px;
 padding:15px;
 border: 0px solid black;
 margin-top:50px;
-margin-bottom:40px;
+margin-bottom:70px;
 background-color:rgba(255,255,255,0.6);
 width:270px;
 }
@@ -106,10 +106,6 @@ li {
     height:41px;
     line-height:41px;
     font-size: 41px;
-    /*-webkit-border-radius:60px;
-    -moz-border-radius: 60px;
-    border-radius: 60px;
-    margin-right: 0px;*/
     color: black;
 }
 a:hover /*mouse over link*/{
