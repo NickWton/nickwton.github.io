@@ -10,7 +10,7 @@ body {
     background-position:left top;
 }
 
-#content /*Each page can only have on id.*/{
+#content /*Each item can only have one id.*/{
 webkit-border-radius: 5px;
 moz-border-radius: 5px;
 border-radius: 5px;
@@ -56,7 +56,7 @@ h2 {
 }
 
 h3 {
-	
+
 }
 
 li {

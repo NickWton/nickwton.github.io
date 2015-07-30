@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pokemon Board Game</title>
+        <link rel='stylesheet' type='text/css' href='game.css'/>
+        <script type="text/javascript" src="pokemongame.js"></script>
+    </head>
+    <body>
+    <h1>Pokemon Board Game</h1>
+
+    <h3>Game Phases</h3>
+    <ul><li>Player Movement: Starting from dealer chip, players can move.</li>
+    <li>Team Rocket Movement: Draw a team rocket card.</li>
+    <li>Events: Starting from dealer chip, players play their events.</li>
+    <li>Environment: Player with dealer chip draws an environment card.</li></ul>
+
+    <h3>Win Conditions</h3>
+    <ul><li>Beat Rival</li>
+    <li>Beat Giovanni</li>
+    <li>Beat 8 Gyms</li></ul>
+
+    <h3>Lose Conditions</h3>
+    <ul><li>Lose to Rival</li>
+    <li>Lose to Giovanni</li>
+    <li>Team Rocket Counter</li>
+    <li>Team Rocket Conquers 4 Gyms</li></ul>
+
+    <h3>Battle Rules</h3>
+    <p>The phases are:<ul><li>Items. If balls are used, skip the rest of the battle turn.</li>
+    <li>Defensive Sanity Check [5, 6]/ Offensive Sanity Check[4, 5, 6]</li>
+    <li>Attack/SpAttack Check [2, 3, 4, 5, 6]</li>
+    <li>Apply Statuses
+    <ul><li>Burn: Attack Check becomes [4, 5, 6]. Deal one damage during status phase.</li>
+    <li>Freeze: Speed becomes 0. SpAttack Check becomes [3, 4, 5, 6]. Do additional Freeze Check [4, 5, 6] after Sanity Check to move. Lasts 2 battle turns.</li>
+    <li>Paralyze: Speed is reducd by 5 (not below 1). Offensive Sanity Check becomes [5, 6]</li>
+    <li>Poison: SpAttack Check becomes [3, 4, 5, 6] and deal one damage during status phase.</li></ul></li></ul>
+
+
+    <h5><a href="#" onClick="drawItem()">Draw an Item Card.</a></h5>
+    <h5><a href="#" onClick="drawTR()">Draw a Team Rocket Card. </a></h5>
+    <h5><a href="#" onClick="drawEvent()">Draw an Event Card.</a></h5>
+    <h5><a href="#" onClick="drawEnvironment()">Draw an Environment Card.</a></h5>
+    </body>
+</html>
