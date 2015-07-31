@@ -10,6 +10,20 @@ body {
     background-size:cover;
     background-position:left top;
 }
+
+#content /*Each item can only have one id.*/{
+webkit-border-radius: 5px;
+moz-border-radius: 5px;
+border-radius: 5px;
+margin-top:50px;
+margin-bottom:150px; /*This is a very crude solution to the mobile problem. Fix this later!*/
+width:500px;
+}
+
+p {
+  margin:50px;
+}
+
 .btn {
   background: #b1d1e6;
   background-image: -webkit-linear-gradient(top, #b1d1e6, #2d373d);
@@ -21,10 +35,9 @@ body {
   -moz-border-radius: 4;
   border-radius: 4px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
-  margin:10px;
 }
 
 .btn:hover {
