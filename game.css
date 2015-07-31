@@ -1,0 +1,38 @@
+body {
+  font-family:arial;
+  padding:0px;
+  border:0px;
+  margin:0px;
+  margin-left:10px;
+  color:white;
+    background:url("mewtwo.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:left top;
+}
+.btn {
+  background: #b1d1e6;
+  background-image: -webkit-linear-gradient(top, #b1d1e6, #2d373d);
+  background-image: -moz-linear-gradient(top, #b1d1e6, #2d373d);
+  background-image: -ms-linear-gradient(top, #b1d1e6, #2d373d);
+  background-image: -o-linear-gradient(top, #b1d1e6, #2d373d);
+  background-image: linear-gradient(to bottom, #b1d1e6, #2d373d);
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  margin:10px;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}

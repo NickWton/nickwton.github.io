@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pokemon Board Game</title>
+        <link rel='stylesheet' type='text/css' href='game.css'/>
+        <script type="text/javascript" src="pokemongame.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="HandheldFriendly" content="true" />
+    </head>
+
+    <body>
+    <h1>Pokemon Board Game</h1>
+    <p href="game.html">Link to game peripherals.</p>
+
+    <h3>Game Phases</h3>
+    <ul><li>Player Movement: Starting from dealer chip, players can move.</li>
+    <li>Team Rocket Movement: Each player draws a Team Rocket card.</li>
+    <li>Events: Starting from dealer chip, players play their events.
+    <p>Most action happens here. You may skip this event draw with many things like fighting a rare pokemon (at 50% chance), gym leader. You must skip this step if you knocked out.</p></li>
+    <li>Environment: Player with dealer chip draws an environment card.</li></ul>
+
+    <h3>Pokemon Specifics</h3>
+    <ul><li>Single natural evolution pokemon evolve at level 4.</li>
+    <li>Double natural evolution pokemon evolve at level 3 and 5.</li>
+    <li>Pokemon must have 3 or less HP to have a chance of being captured.</li>
+    <li>Roll 4, 5 or 6 to capture regular Pokemon.</li>
+    <li>Roll 5 or 6 to capture rare Pokemon.</li>
+    <li>Roll 6 to capture legendary Pokemon.</li>
+    <li>Experience gained is equal to the level of the Pokemon defeated.</li>
+    <li>Getting knocked out causes you to lose your next encounter.</li>
+    <li>Staying in town allows you to fully heal one Pokemon. You can still encounter.</li>
+    </ul>
+
+    <h3>Win Conditions</h3>
+    <ul>
+    <li>Beat Giovanni</li>
+    <li>Beat 8 Gyms</li></ul>
+
+    <h3>Lose Conditions</h3>
+    <ul>
+    <li>Lose to Giovanni</li>
+    <li>Team Rocket has 25 grunts on board (raiders count as two, chieftains count as 3).</li>
+    <li>Team Rocket Conquers 4 Gyms (Gyms are captured when 3 grunts are on them).</li></ul>
+
+    <h3>Battle Rules</h3>
+    <p>NPCs don't roll. Math.ceiling() their stats for checks.</p>
+    <p>The phases are:<ul><li>Items. If balls are used, skip the rest of the battle turn.</li>
+    <li>Speed Check [3, 4, 5, 6]</li>
+    <li>Attack/SpAttack Check [3, 4, 5, 6].</li>
+    <li>Apply Statuses
+    <ul><li>Burn: Attack Check becomes [5, 6].</li>
+    <li>Freeze: Roll a dice, with a 50% chance to skip next battle turn.</li>
+    <li>Paralyze: Speed is reduced to 0.</li>
+    <li>Poison: Deal three damage during status phase.</li></ul></li></ul>
+
+    </body>
+</html>
