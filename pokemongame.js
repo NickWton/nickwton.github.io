@@ -238,10 +238,6 @@ ownedPokemon1 = document.getElementById("pokemon1").value;
 ownedPokemon2= document.getElementById("pokemon2").value;
 
 function pokemon1 (){
-    var fatigue = document.getElementById("fatigue").value;
-    var lvl1 = document.getElementById("lvl1").value;
-    elvl1=lvl1-fatigue;
-    if (elvl1<=0){elvl1=1;}
     ownedPokemon1 = document.getElementById("pokemon1").value;
     //We need the object, not just the name.
     for(var i = 0; i < pokemon.length; i++) {
@@ -249,19 +245,23 @@ function pokemon1 (){
             ownedPokemon1 = pokemon[i];
         }
     }
+    var fatigue = document.getElementById("fatigue").value;
+    var lvl1 = document.getElementById("lvl1").value;
+    elvl1=lvl1-fatigue-ownedPokemon1.lvl;
+    if (elvl1<=0){elvl1=0;}
     pokemon1Text.value = ("HP: " + (ownedPokemon1.hp+elvl1) + "       Attack: " + (ownedPokemon1.a+elvl1) + "        S. Attack: " + (ownedPokemon1.sa+elvl1) + "        Speed: " + (ownedPokemon1.s+elvl1));
 }
 //Same thing for second pokemon.
 function pokemon2 (){
-    var fatigue = document.getElementById("fatigue").value;
-    var lvl2 = document.getElementById("lvl2").value;
-    elvl2=lvl2-fatigue;
-    if (elvl2<=0){elvl2=1;}
     ownedPokemon2 = document.getElementById("pokemon2").value;
     for(var i = 0; i < pokemon.length; i++) {
         if (ownedPokemon2 == pokemon[i].name) {
             ownedPokemon2 = pokemon[i];
         }
     }
+    var fatigue = document.getElementById("fatigue").value;
+    var lvl2 = document.getElementById("lvl2").value;
+    elvl2=lvl2-fatigue-ownedPokemon2.lvl;
+    if (elvl2<=0){elvl2=0;}
     pokemon2Text.value = ("HP: " + (ownedPokemon2.hp+elvl2) + "       Attack: " + (ownedPokemon2.a+elvl2) + "        S. Attack: " + (ownedPokemon2.sa+elvl2) + "        Speed: " + (ownedPokemon2.s+elvl2));
 }
