@@ -24,9 +24,9 @@ for (i=0; i< 4;i++) {
     itemCards.push(new card("Fly", "Fly to any city."));}
 for (i=0; i< 2;i++) {
     itemCards.push(new card("AB +4", "Attack Bonus +4."));}
-for (i=0; i< 5;i++) {
+for (i=0; i< 4;i++) {
     itemCards.push(new card("AB +3", "Attack Bonus +3."));}
-for (i=0; i< 7;i++) {
+for (i=0; i< 6;i++) {
     itemCards.push(new card("AB +2", "Attack Bonus +2."));}
 function drawItem() {
     cardText.value=(drawCard(itemCards));
@@ -111,6 +111,66 @@ function drawEnvironment() {
 }
 
 
+function Pokemon (name, lvl, hp, a, sa, s) {
+    this.name = name;
+    this.lvl = lvl;
+    this.hp = hp;
+    this.a = a;
+    this.sa = sa
+    this.s = s;
+}
+function drawPokemon (pokemon){
+    x=Math.floor(Math.random()*pokemon.length);
+    return pokemon[x];
+}
+var grassPokemon = [];
+grassPokemon.push( new Pokemon("Paras", 1, 3, 3, 2, 2));
+grassPokemon.push( new Pokemon("Bellsprout", 1, 2, 3, 2, 2));
+grassPokemon.push( new Pokemon("Caterpie", 1, 2, 3, 3, 2));
+grassPokemon.push( new Pokemon("Doduo", 1, 3, 4, 1, 2));
+grassPokemon.push( new Pokemon("Spearow", 1, 3, 3, 1, 3));
+grassPokemon.push( new Pokemon("Pidgey", 1, 2, 4, 2, 4));
+function drawGrass (){
+    pokemon=drawPokemon(grassPokemon);
+    pokemonText.value = (pokemon.name + ": Level " + pokemon.lvl + ", HP " + pokemon.hp + ", Attack " + pokemon.a + ", Special Attack " + pokemon.sa + ", Speed " + pokemon.s);
+}
 
-console.log(TRCards.length);
-console.log(drawCard(itemCards));
+var waterPokemon = [];
+waterPokemon.push( new Pokemon("Psyduck", 1, 3, 1, 4, 2));
+waterPokemon.push( new Pokemon("Horsea", 1, 3, 2, 3, 3));
+waterPokemon.push( new Pokemon("Staryu", 1, 3, 2, 3, 3));
+waterPokemon.push( new Pokemon("Poliwag", 1, 2, 3, 2, 3));
+waterPokemon.push( new Pokemon("Magikarp", 1, 3, 0, 0, 4));
+waterPokemon.push( new Pokemon("Tentacool", 1, 3, 3, 3, 2));
+waterPokemon.push( new Pokemon("Goldeen", 1, 3, 3, 2, 3));
+function drawWater (){
+    pokemon=drawPokemon(waterPokemon);
+    pokemonText.value = (pokemon.name + ": Level " + pokemon.lvl + ", HP " + pokemon.hp + ", Attack " + pokemon.a + ", Special Attack " + pokemon.sa + ", Speed " + pokemon.s);
+}
+
+var rarePokemon =[];
+rarePokemon.push( new Pokemon("Charmander", 1, 3, 3, 4, 3));
+rarePokemon.push( new Pokemon("Squirtle", 1, 4, 3, 3, 3));
+rarePokemon.push( new Pokemon("Bulbasaur", 1, 4, 3, 3, 3));
+rarePokemon.push( new Pokemon("Pikachu", 1, 3, 3, 4, 4));
+rarePokemon.push( new Pokemon("Abra", 1, 2, 2, 4, 4));
+rarePokemon.push( new Pokemon("Chansey", 1, 8, 1, 2, 1));
+function drawRare (){
+    pokemon=drawPokemon(rarePokemon);
+    pokemonText.value = (pokemon.name + ": Level " + pokemon.lvl + ", HP " + pokemon.hp + ", Attack " + pokemon.a + ", Special Attack " + pokemon.sa + ", Speed " + pokemon.s);
+}
+
+var legendaryPokemon = [];
+legendaryPokemon.push( new Pokemon("MewTwo", 4, 9, 6, 12, 13));
+legendaryPokemon.push( new Pokemon("Moltres", 4, 12, 9, 9, 8));
+legendaryPokemon.push( new Pokemon("Articuno", 4, 9, 7, 9, 8));
+legendaryPokemon.push( new Pokemon("Zapdos", 4, 13, 7, 8, 9));
+function drawLegendary (){
+    pokemon=drawPokemon(legendaryPokemon);
+    pokemonText.value = (pokemon.name + ": Level " + pokemon.lvl + ", HP " + pokemon.hp + ", Attack " + pokemon.a + ", Special Attack " + pokemon.sa + ", Speed " + pokemon.s);
+}
+
+var pokemon=[];
+pokemon.push(grassPokemon);
+pokemon.push(waterPokemon);
+pokemon.push(rarePokemon);

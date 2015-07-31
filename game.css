@@ -18,10 +18,17 @@ width:800px;
 }
 
 #cardText {
-  width:600px;
-  height:90px;
+  width:550px;
+  height:64px;
   font-family:arial;
-  font-size:16px;
+  font-size:18px;
+}
+
+#pokemonText {
+    width:550px;
+    height:21px;
+    font-family:arial;
+    font-size:18px;
 }
 
 p {
