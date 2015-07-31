@@ -32,7 +32,6 @@ function drawItem() {
     cardText.value=(drawCard(itemCards));
 }
 
-
 var TRCards = [];
 for (i=0; i< 1;i++) {
     TRCards.push(new card("Team Rocket Training", "Level up all Team Rocket members."));}
@@ -170,7 +169,58 @@ function drawLegendary (){
     pokemonText.value = (pokemon.name + ": Level " + pokemon.lvl + ", HP " + pokemon.hp + ", Attack " + pokemon.a + ", Special Attack " + pokemon.sa + ", Speed " + pokemon.s);
 }
 
+var evolvedPokemon = [];
+evolvedPokemon.push( new Pokemon("Golduck", 4, 7, 4, 8, 7));
+evolvedPokemon.push( new Pokemon("Seadra", 4, 6, 5, 8, 6));
+evolvedPokemon.push( new Pokemon("Starmie", 4, 6, 4, 8, 8));
+evolvedPokemon.push( new Pokemon("Poliwhirl", 4, 7, 8, 5, 6));
+evolvedPokemon.push( new Pokemon("Gyarados", 4, 9, 9, 3, 7));
+evolvedPokemon.push( new Pokemon("Tentacruel", 4, 8, 6, 6, 6));
+evolvedPokemon.push( new Pokemon("Seaking", 4, 7, 7, 7, 7));
+evolvedPokemon.push( new Pokemon("Parasect", 4, 8, 6, 7, 5));
+evolvedPokemon.push( new Pokemon("Weepinbell", 4, 7, 7, 7, 6));
+evolvedPokemon.push( new Pokemon("Dodrio", 4, 6, 8, 3, 7));
+evolvedPokemon.push( new Pokemon("Fearow", 4, 7, 7, 6, 8));
+evolvedPokemon.push( new Pokemon("Raichu", 4, 8, 6, 8, 7));
+evolvedPokemon.push( new Pokemon("Metapod", 3, 10, 3, 3, 3));
+evolvedPokemon.push( new Pokemon("Pidgeotto", 3, 5, 6, 4, 7));
+evolvedPokemon.push( new Pokemon("Charmeleon", 3, 7, 6, 7, 6));
+evolvedPokemon.push( new Pokemon("Wartortle", 3, 8, 6, 6, 6));
+evolvedPokemon.push( new Pokemon("Ivysaur", 3, 8, 6, 6, 5));
+evolvedPokemon.push( new Pokemon("Kadabra", 3, 5, 2, 8, 8));
+evolvedPokemon.push( new Pokemon("Butterfree", 5, 8, 6, 8, 7));
+evolvedPokemon.push( new Pokemon("Pidgeot", 5, 8, 9, 7, 10));
+evolvedPokemon.push( new Pokemon("Charizard", 5, 9, 9, 10, 9));
+evolvedPokemon.push( new Pokemon("Blastoise", 5, 10, 8, 8, 8));
+evolvedPokemon.push( new Pokemon("Venasaur", 5, 9, 8, 8, 7));
+evolvedPokemon.push( new Pokemon("Alakazam", 5, 7, 4, 10, 10));
+
 var pokemon=[];
 pokemon.push(grassPokemon);
 pokemon.push(waterPokemon);
 pokemon.push(rarePokemon);
+pokemon.push(legendaryPokemon);
+pokemon.push(evolvedPokemon);
+var sel1 = document.getElementById('pokemon1');
+for(var i = 0; i < pokemon.length; i++) {
+    var opt = document.createElement('option');
+    opt.innerHTML = pokemon[i].name;
+    opt.value = pokemon[i].name;
+    sel1.appendChild(opt);
+}
+/*var fatigue = document.getElementById("fatigue").value;
+var lvl1 = document.getElementById("lvl1").value;
+var lvl2 = document.getElementById("lvl2").value;
+elvl1=lvl1-fatigue
+elvl2=lvl2-fatigue
+if (elvl1<=0){elvl1=1}
+if (elvl2<=0){elvl2=1}
+ownedPokemon1 = document.getElementById("pokemon1").value;
+ownedPokemon2 = document.getElementById("pokemon2").value;*/
+
+function pokemon1 (){
+    pokemon1Text.value = ("Attack: " + (pokemon.a+elvl1) + "   Special Attack: " + (pokemon.sa+elvl1) + "   Speed " + (pokemon.s+elvl2));
+}
+function pokemon2 (){
+    pokemon1Text.value = ("Attack: " + (pokemon.a+elvl2) + "   Special Attack: " + (pokemon.sa+elvl1) + "   Speed " + (pokemon.s+elvl2));
+}

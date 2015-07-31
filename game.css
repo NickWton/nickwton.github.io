@@ -3,7 +3,7 @@ body {
   padding:0px;
   border:0px;
   margin:0px;
-  margin-left:10px;
+  margin-left:5px;
   color:white;
     background:url("mewtwo.jpg");
     background-repeat:no-repeat;
@@ -12,8 +12,7 @@ body {
 }
 
 #content /*Each item can only have one id.*/{
-margin-top:20px;
-margin-bottom:150px; /*This is a very crude solution to the mobile problem. Fix this later!*/
+margin-top:10px;
 width:800px;
 }
 
@@ -30,9 +29,25 @@ width:800px;
     font-family:arial;
     font-size:18px;
 }
+#pokemon1Text {
+    width:550px;
+    height:21px;
+    font-family:arial;
+    font-size:18px;
+}
+#pokemon2Text{
+    width:550px;
+    height:21px;
+    font-family:arial;
+    font-size:18px;
+}
 
 p {
   margin:10px;
+}
+
+.inline {
+  display:inline;
 }
 
 .btn {

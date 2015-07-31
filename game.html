@@ -3,7 +3,6 @@
     <head>
         <title>Pokemon Board Game</title>
         <link rel='stylesheet' type='text/css' href='game.css'/>
-        <script type="text/javascript" src="pokemongame.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="HandheldFriendly" content="true" />
         <link rel="shortcut icon" href="images/pokefavicon.ico">
@@ -11,14 +10,17 @@
 
     <body><section id="content">
 
-    <p><a class="btn" href="#" onClick="drawItem()">Item Card</a>
+    <p>
+    <a class="btn" href="#" onClick="drawItem()">Item Card</a>
     <a class="btn" href="#" onClick="drawTR()">Team Rocket Card</a>
     <a class="btn" href="#" onClick="drawEvent()">Event Card</a>
     <a class="btn" href="#" onClick="drawEnvironment()">Environment Card</a></p>
     <p style = "">
      <textarea id = "cardText" value = "Blank"></textarea>
-    </p>
-    <p><a class="btn" href="#" onClick="drawGrass()">Grass Pokemon</a>
+     </p>
+
+    <p>
+    <a class="btn" href="#" onClick="drawGrass()">Grass Pokemon</a>
     <a class="btn" href="#" onClick="drawWater()">Water Pokemon</a>
     <a class="btn" href="#" onClick="drawRare()">Rare Pokemon</a>
     <a class="btn" href="#" onClick="drawLegendary()">???</a></p>
@@ -26,4 +28,97 @@
      <textarea id = "pokemonText" value = "Blank"></textarea>
     </p>
 
+    <p class="inline">Fatigue
+    <select id="fatigue" onchange=>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+    </select></p>
+
+<p><select id="pokemon1" onchange="pokemon1 ()"></select>
+    Level
+    <select id="lvl1" onchange="pokemon1 ()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">1</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    Experience
+    <select>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">1</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    </p>
+    <p>
+    <textarea id = "pokemon1Text" value = "Blank"></textarea>
+    </p>
+
+    <p><select id="pokemon2" onchange=></select>
+    Level
+    <select id="lvl2" onchange=>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">1</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    Experience
+    <select>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">1</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    </p>
+    <p>
+    <textarea id = "pokemon2Text" value = "Blank"></textarea>
+    </p>
     </section></body>
+
+<script type="text/javascript" src="pokemongame.js"></script>
