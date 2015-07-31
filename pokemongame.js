@@ -17,19 +17,19 @@ for (i=0; i< 2;i++) {
 for (i=0; i< 2;i++) {
     itemCards.push(new card("Rare Candy", "Give this to your pokemon; they love it."));}
 for (i=0; i< 5;i++) {
-    itemCards.push(new card("Time Machine", "Re-roll the dice (can be used whenever), then draw a card."));}
+    itemCards.push(new card("Time Machine", "Re-roll the dice (can be used whenever), then draw an item card."));}
 for (i=0; i< 5;i++) {
     itemCards.push(new card("Portable Hammock", "All players on your space lose one fatigue counter."));}
 for (i=0; i< 4;i++) {
     itemCards.push(new card("Fly", "Fly to any city."));}
 for (i=0; i< 2;i++) {
-    itemCards.push(new card("Attack Bonus +4", "Attack Bonus +4."));}
+    itemCards.push(new card("AB +4", "Attack Bonus +4."));}
 for (i=0; i< 5;i++) {
-    itemCards.push(new card("Attack Bonus +3", "Attack Bonus +3."));}
+    itemCards.push(new card("AB +3", "Attack Bonus +3."));}
 for (i=0; i< 7;i++) {
-    itemCards.push(new card("Attack Bonus +2", "Attack Bonus +2."));}
+    itemCards.push(new card("AB +2", "Attack Bonus +2."));}
 function drawItem() {
-    alert(drawCard(itemCards));
+    cardText.value=(drawCard(itemCards));
 }
 
 
@@ -65,7 +65,7 @@ for (i=0; i< 1;i++) {
 for (i=0; i< 1;i++) {
     TRCards.push(new card("Chieftain Development", "Release 1 chieftain from station 4."));}
 function drawTR() {
-    alert(drawCard(TRCards));
+   cardText.value=(drawCard(TRCards));
 }
 
 var eventCards = [];
@@ -87,9 +87,8 @@ for (i=0; i< 2;i++) {
     eventCards.push(new card("You see a strange Pokemon...", "Fight one of the legendary Pokemon."));}
 for (i=0; i< 2;i++) {
     eventCards.push(new card("You see a rare Pokemon...", "Fight one of the rare Pokemon."));}
-
 function drawEvent() {
-    alert(drawCard(eventCards));
+    cardText.value=(drawCard(eventCards));
 }
 
 var environmentCards = [];
@@ -108,7 +107,7 @@ for (i=0; i< 3;i++) {
 for (i=0; i< 1;i++) {
     environmentCards.push(new card("Mewtwo Sleeps. All players feel less pressure.", "All Players lose one fatigue counter."));}
 function drawEnvironment() {
-    alert(drawCard(environmentCards) + "\nA peaceful spot appears at position " + Math.floor(Math.random()*44));
+    cardText.value=(drawCard(environmentCards) + "\nA peaceful spot appears at position " + Math.floor(Math.random()*44) + ".");
 }
 
 
