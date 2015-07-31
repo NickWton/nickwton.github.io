@@ -196,11 +196,22 @@ evolvedPokemon.push( new Pokemon("Venasaur", 5, 9, 8, 8, 7));
 evolvedPokemon.push( new Pokemon("Alakazam", 5, 7, 4, 10, 10));
 
 var pokemon=[];
-pokemon.push(grassPokemon);
-pokemon.push(waterPokemon);
-pokemon.push(rarePokemon);
-pokemon.push(legendaryPokemon);
-pokemon.push(evolvedPokemon);
+for(var i = 0; i < grassPokemon.length; i++) {
+pokemon.push(grassPokemon[i]);
+}
+for(var i = 0; i < rarePokemon.length; i++) {
+pokemon.push(rarePokemon[i]);
+}
+for(var i = 0; i < waterPokemon.length; i++) {
+pokemon.push(waterPokemon[i]);
+}
+for(var i = 0; i < legendaryPokemon.length; i++) {
+pokemon.push(legendaryPokemon[i]);
+}
+for(var i = 0; i < evolvedPokemon.length; i++) {
+pokemon.push(evolvedPokemon[i]);
+}
+
 var sel1 = document.getElementById('pokemon1');
 for(var i = 0; i < pokemon.length; i++) {
     var opt = document.createElement('option');
@@ -208,19 +219,49 @@ for(var i = 0; i < pokemon.length; i++) {
     opt.value = pokemon[i].name;
     sel1.appendChild(opt);
 }
-/*var fatigue = document.getElementById("fatigue").value;
+var sel2 = document.getElementById('pokemon2');
+for(var i = 0; i < pokemon.length; i++) {
+    var opt = document.createElement('option');
+    opt.innerHTML = pokemon[i].name;
+    opt.value = pokemon[i].name;
+    sel2.appendChild(opt);
+}
+
+var fatigue = document.getElementById("fatigue").value;
 var lvl1 = document.getElementById("lvl1").value;
 var lvl2 = document.getElementById("lvl2").value;
-elvl1=lvl1-fatigue
-elvl2=lvl2-fatigue
-if (elvl1<=0){elvl1=1}
-if (elvl2<=0){elvl2=1}
+elvl1=lvl1-fatigue;
+elvl2=lvl2-fatigue;
+if (elvl1<=0){elvl1=1;}
+if (elvl2<=0){elvl2=1;}
 ownedPokemon1 = document.getElementById("pokemon1").value;
-ownedPokemon2 = document.getElementById("pokemon2").value;*/
+ownedPokemon2= document.getElementById("pokemon2").value;
 
 function pokemon1 (){
-    pokemon1Text.value = ("Attack: " + (pokemon.a+elvl1) + "   Special Attack: " + (pokemon.sa+elvl1) + "   Speed " + (pokemon.s+elvl2));
+    var fatigue = document.getElementById("fatigue").value;
+    var lvl1 = document.getElementById("lvl1").value;
+    elvl1=lvl1-fatigue;
+    if (elvl1<=0){elvl1=1;}
+    ownedPokemon1 = document.getElementById("pokemon1").value;
+    //We need the object, not just the name.
+    for(var i = 0; i < pokemon.length; i++) {
+        if (ownedPokemon1 == pokemon[i].name) {
+            ownedPokemon1 = pokemon[i];
+        }
+    }
+    pokemon1Text.value = ("HP: " + (ownedPokemon1.hp+elvl1) + "       Attack: " + (ownedPokemon1.a+elvl1) + "        S. Attack: " + (ownedPokemon1.sa+elvl1) + "        Speed: " + (ownedPokemon1.s+elvl1));
 }
+//Same thing for second pokemon.
 function pokemon2 (){
-    pokemon1Text.value = ("Attack: " + (pokemon.a+elvl2) + "   Special Attack: " + (pokemon.sa+elvl1) + "   Speed " + (pokemon.s+elvl2));
+    var fatigue = document.getElementById("fatigue").value;
+    var lvl2 = document.getElementById("lvl2").value;
+    elvl2=lvl2-fatigue;
+    if (elvl2<=0){elvl2=1;}
+    ownedPokemon2 = document.getElementById("pokemon2").value;
+    for(var i = 0; i < pokemon.length; i++) {
+        if (ownedPokemon2 == pokemon[i].name) {
+            ownedPokemon2 = pokemon[i];
+        }
+    }
+    pokemon2Text.value = ("HP: " + (ownedPokemon2.hp+elvl2) + "       Attack: " + (ownedPokemon2.a+elvl2) + "        S. Attack: " + (ownedPokemon2.sa+elvl2) + "        Speed: " + (ownedPokemon2.s+elvl2));
 }

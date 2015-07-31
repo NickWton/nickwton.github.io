@@ -28,8 +28,8 @@
      <textarea id = "pokemonText" value = "Blank"></textarea>
     </p>
 
-    <p class="inline">Fatigue
-    <select id="fatigue" onchange=>
+    <p class="inline">Player Fatigue
+    <select id="fatigue" onchange="pokemon1 (); pokemon2 ()">
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -82,9 +82,9 @@
     <textarea id = "pokemon1Text" value = "Blank"></textarea>
     </p>
 
-    <p><select id="pokemon2" onchange=></select>
+    <p><select id="pokemon2" onchange="pokemon2 ()"></select>
     Level
-    <select id="lvl2" onchange=>
+    <select id="lvl2" onchange="pokemon2 ()">
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -122,3 +122,4 @@
     </section></body>
 
 <script type="text/javascript" src="pokemongame.js"></script>
+</html>
