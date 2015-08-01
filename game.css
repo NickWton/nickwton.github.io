@@ -18,9 +18,9 @@ width:800px;
 
 #cardText {
   width:550px;
-  height:64px;
+  height:80px;
   font-family:arial;
-  font-size:18px;
+  font-size:16px;
 }
 
 #pokemonText {
@@ -44,6 +44,10 @@ width:800px;
 
 p {
   margin:10px;
+}
+
+footer {
+  width:75%;
 }
 
 .inline {

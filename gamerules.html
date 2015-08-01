@@ -11,17 +11,24 @@
 
     <body>
     <h1>Pokemon Board Game</h1>
-    <p> <a href="game.html">Link to game peripherals.</a></p>
+    <a href="game.html">Link to game peripherals.</a>
+
+    <h3>Player Starts</h3>
+    <ul>
+    <li>
+    </ul>
 
     <h3>Game Phases</h3>
-    <ul><li>Player Movement: Starting from dealer chip, players can move.</li>
-    <li>Team Rocket Movement: Each player draws a Team Rocket card.</li>
-    <li>Events: Starting from dealer chip, players play their events.
-    <p>Most action happens here. You may skip this event draw with many things like fighting a rare pokemon (at 50% chance), gym leader. You must skip this step if you knocked out.</p></li>
+    <ul><li>Player Movement: Starting from dealer chip, players can move up to 3 spaces. If you move to the same space occupied by a team rocket member, you must stop there.</li>
+    <li>Team Rocket Movement: Starting from dealer chip, each player draws a Team Rocket card. If a team rocket member moves to the same space as a player, the member stops moving.</li>
+    <li>Events: Starting from dealer chip, players play their events.<ul>
+    <li>If you are standing on the same space as a team rocket member, you must fight him.</li>
+    <li>You may skip this event to fight a rare pokemon at a 50% chance if you are on a rare space, or fight a gym leader.</li>
+    <li>You must skip this step if you are knocked out. Heal all of your pokemon to full.</li></ul></li>
     <li>Environment: Player with dealer chip draws an environment card.</li></ul>
 
     <h3>Pokemon Specifics</h3>
-    <ul><li>Single natural evolution pokemon evolve at level 4.</li>
+    <ul><li>Single natural evolution pokemon evolve at level 4. Some require an evolution stone.</li>
     <li>Double natural evolution pokemon evolve at level 3 and 5.</li>
     <li>Pokemon must have 3 or less HP to have a chance of being captured.</li>
     <li>Roll 4, 5 or 6 to capture regular Pokemon.</li>
@@ -34,25 +41,34 @@
 
     <h3>Win Conditions</h3>
     <ul>
-    <li>Beat Giovanni</li>
-    <li>Beat 8 Gyms</li></ul>
+    <li>Beat Giovanni. All players combine their pokemon and fight Giovanni together after 25 grunts are defeated.</li>
+    <li>Beat 8 Gyms. Gym leaders have two random level 4 pokemon. If a player owned pokemon is above level 4, gym leaders' pokemon are that level instead.</li>
+    </ul>
 
     <h3>Lose Conditions</h3>
     <ul>
-    <li>Lose to Giovanni</li>
-    <li>Team Rocket has 25 grunts on board (raiders count as two, chieftains count as 3).</li>
-    <li>Team Rocket Conquers 4 Gyms (Gyms are captured when 3 grunts are on them).</li></ul>
+    <li>Lose to Giovanni. </li>
+    <li>Team Rocket have 25 grunts on board (raiders count as two, chieftains count as 3).</li>
+    <li>Team Rocket Conquers 4 Gyms (Gyms are captured when 3 grunts are on them).</li>
+    </ul>
 
     <h3>Battle Rules</h3>
-    <p>NPCs don't roll. Math.ceiling() their stats for checks.</p>
-    <p>The phases are:<ul><li>Items. If balls are used, skip the rest of the battle turn.</li>
+    <p>NPCs don't roll. Half and round up their stats for checks.</p>
+    <p>The phases are:
+    <ul>
+    <li>Items. If balls are used, skip the rest of the battle turn.</li>
     <li>Speed Check [3, 4, 5, 6]</li>
     <li>Attack/SpAttack Check [3, 4, 5, 6].</li>
     <li>Apply Statuses
     <ul><li>Burn: Attack Check becomes [5, 6].</li>
     <li>Freeze: Roll a dice, with a 50% chance to skip next battle turn.</li>
     <li>Paralyze: Speed is reduced to 0.</li>
-    <li>Poison: Deal three damage during status phase.</li></ul></li></ul>
+    <li>Poison: Deal three damage during status phase.</li></ul></li>
+    <li>Go back to item step after this.</li>
+    </ul>
 
+    <footer>Thanks to my friends for their endless hours of playtesting and support. Thank you James for your javascript support.
+    Thank you Michael for the hours you dedicated alpha testing the game and your insight to add a fatigue mechanic.
+    Thank you Lucas for your idea to add a double-edged sword item (now termed Roidy Berry).</footer>
     </body>
 </html>

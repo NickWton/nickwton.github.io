@@ -1,7 +1,9 @@
+//General card object with name and text.
 function card (name, text) {
     this.name = name;
     this.text = text;
 }
+//General function to randomly draw card. Takes in the array of all of the deck of cards.
 function drawCard (card){
     x=Math.floor(Math.random()*card.length);
     return card[x].name + "\n" + card[x].text ;
@@ -11,23 +13,35 @@ var itemCards = [];
 for (i=0; i< 1;i++) {
     itemCards.push(new card("Master Ball", "Optionally add 1, 2 or 3 to ball roll."));}
 for (i=0; i< 5;i++) {
-    itemCards.push(new card("Potion", "Fully heal the hitpoints of one Pokemon (use during event phase)."));}
+    itemCards.push(new card("Full Restore", "Fully heal the hitpoints of one Pokemon (dead or alive)."));}
 for (i=0; i< 2;i++) {
     itemCards.push(new card("Evolution Stone", "A stone that certain pokemon have affinity for."));}
 for (i=0; i< 2;i++) {
     itemCards.push(new card("Rare Candy", "Give this to your pokemon; they love it."));}
-for (i=0; i< 5;i++) {
-    itemCards.push(new card("Time Machine", "Re-roll the dice (can be used whenever), then draw an item card."));}
+for (i=0; i< 7;i++) {
+    itemCards.push(new card("Time Machine", "Re-roll the dice (can be used whenever as an instant), then draw an item card."));}
 for (i=0; i< 5;i++) {
     itemCards.push(new card("Portable Hammock", "All players on your space lose one fatigue counter."));}
 for (i=0; i< 4;i++) {
     itemCards.push(new card("Fly", "Fly to any city."));}
-for (i=0; i< 2;i++) {
+for (i=0; i< 1;i++) {
     itemCards.push(new card("AB +4", "Attack Bonus +4."));}
-for (i=0; i< 4;i++) {
+for (i=0; i< 3;i++) {
     itemCards.push(new card("AB +3", "Attack Bonus +3."));}
-for (i=0; i< 6;i++) {
+for (i=0; i< 4;i++) {
     itemCards.push(new card("AB +2", "Attack Bonus +2."));}
+for (i=0; i< 1;i++) {
+    itemCards.push(new card("Flaming Macho Brace", "Burn your pokemon and reduce its special attack to 0. Your pokemon gains double experience until the end of the battle."));}
+for (i=0; i< 1;i++) {
+    itemCards.push(new card("Freezing Power Belt", "Roll a dice with a 50% chance to skip your current battle turn, then freeze your pokemon. Your pokemon gains double experience until the end of the battle."));}
+for (i=0; i< 1;i++) {
+    itemCards.push(new card("Lagging Power Weight", "Paralyze your pokemon. Your pokemon gains double experience until the end of the battle."));}
+for (i=0; i< 1;i++) {
+    itemCards.push(new card("Toxic Power Lens", "Deal 3 damage to your pokemon. Poison your pokemon. Your pokemon gains double experience until the end of the battle."));}
+for (i=0; i< 4;i++) {
+    itemCards.push(new card("Experience Share", "The experience gained from this battle is transferred to another player's pokemon (that pokemon must be a lower level)."));}
+for (i=0; i< 3;i++) {
+    itemCards.push(new card("Roidy Berry", "Deal 3 damage or half your pokemon's current hp (whichever is higher) to your pokemon. Attack Bonus +3; Speed Bonus +3"));}
 function drawItem() {
     cardText.value=(drawCard(itemCards));
 }
@@ -35,34 +49,36 @@ function drawItem() {
 var TRCards = [];
 for (i=0; i< 1;i++) {
     TRCards.push(new card("Team Rocket Training", "Level up all Team Rocket members."));}
-for (i=0; i< 4;i++) {
-    TRCards.push(new card("Giovanni's Rage", "Any members located adjacent to a Team Rocket base fight Giovanni (You don't lose if he shreds you)."));}
 for (i=0; i< 1;i++) {
-    TRCards.push(new card("Giovanni's Rage", "Fight a Team Rocket Chieftain. If he fails, place a put a chieftain in play where he is. "));}
-for (i=0; i< 2;i++) {
-    TRCards.push(new card("Giovanni's Rage", "Fight fights a Team Rocket Raider. If he fails, place a put a raider in play where he is. All chieftains move."));}
+    TRCards.push(new card("Giovanni is thinking... Should he spend money on training or hiring?", "If the highest level player owned pokemon is higher level than a raider, level up all team rocket members. Else, release 1 chieftain from station 3."));}
 for (i=0; i< 4;i++) {
-    TRCards.push(new card("Giovanni's Rage", "Fight fights a Team Rocket Grunt. If he fails, place a put a grunt in play where he is. All raiders move."));}
-for (i=0; i< 4;i++) {
-    TRCards.push(new card("Grunt Development", "Release 1 grunts from station 1. All chieftains move."));}
-for (i=0; i< 4;i++) {
-    TRCards.push(new card("Grunt Development", "Release 1 grunts from station 2. All raiders move."));}
-for (i=0; i< 4;i++) {
-    TRCards.push(new card("Grunt Development", "Release 1 grunts from station 3. All grunts move."));}
-for (i=0; i< 4;i++) {
-    TRCards.push(new card("Grunt Development", "Release 1 grunts from station 4. All grunts move."));}
-for (i=0; i< 2;i++) {
-    TRCards.push(new card("Raider Development", "Release 1 raiders from station 1. All chieftains move."));}
-for (i=0; i< 2;i++) {
-    TRCards.push(new card("Raider Development", "Release 1 raiders from station 2. All raiders move."));}
-for (i=0; i< 2;i++) {
-    TRCards.push(new card("Raider Development", "Release 1 raiders from station 3. All grunts move."));}
-for (i=0; i< 2;i++) {
-    TRCards.push(new card("Raider Development", "Release 1 raiders from station 4. All chieftains move."));}
+    TRCards.push(new card("Giovanni is drinking lemonade on his front porch.", "Any members located adjacent to a Team Rocket base fight Giovanni (You don't lose if he shreds you)."));}
 for (i=0; i< 1;i++) {
-    TRCards.push(new card("Chieftain Development", "Release 1 chieftain from station 3."));}
+    TRCards.push(new card("You tried to run but he caught you before you could.", "Fight a Team Rocket Chieftain. If you lose, place a chieftain in play where you lost. "));}
 for (i=0; i< 1;i++) {
-    TRCards.push(new card("Chieftain Development", "Release 1 chieftain from station 4."));}
+    TRCards.push(new card("This guy looks tough... Your curiosity gets the best of you.", "You approach a Team Rocket Raider. Fight him; if you lose, place a raider in play where you lost. All chieftains move."));}
+for (i=0; i< 2;i++) {
+    TRCards.push(new card("You make eye contact with someone... Who is he?", "He's a Team Rocket Grunt. Fight him; if you lose, place a grunt in play where you lost. All raiders move."));}
+for (i=0; i< 4;i++) {
+    TRCards.push(new card("Grunt Development:", "Release 1 grunts from station 1. All chieftains move."));}
+for (i=0; i< 4;i++) {
+    TRCards.push(new card("Grunt Development:", "Release 1 grunts from station 2. All raiders move."));}
+for (i=0; i< 4;i++) {
+    TRCards.push(new card("Grunt Development:", "Release 1 grunts from station 3. All grunts move."));}
+for (i=0; i< 4;i++) {
+    TRCards.push(new card("Grunt Development:", "Release 1 grunts from station 4. All grunts move."));}
+for (i=0; i< 2;i++) {
+    TRCards.push(new card("Raider Development:", "Release 1 raider from station 1. All chieftains move."));}
+for (i=0; i< 2;i++) {
+    TRCards.push(new card("Raider Development:", "Release 1 raider from station 2. All raiders move."));}
+for (i=0; i< 2;i++) {
+    TRCards.push(new card("Raider Development:", "Release 1 raider from station 3. All grunts move."));}
+for (i=0; i< 2;i++) {
+    TRCards.push(new card("Raider Development:", "Release 1 raider from station 4. All chieftains move."));}
+for (i=0; i< 1;i++) {
+    TRCards.push(new card("Chieftain Development:", "Release 1 chieftain from station 3."));}
+for (i=0; i< 1;i++) {
+    TRCards.push(new card("Chieftain Development:", "Release 1 chieftain from station 4."));}
 function drawTR() {
    cardText.value=(drawCard(TRCards));
 }
@@ -70,7 +86,7 @@ function drawTR() {
 var eventCards = [];
 for (i=0; i< 6;i++) {
     eventCards.push(new card("You found some goodies.", "Draw 1 Item Card."));}
-for (i=0; i< 4;i++) {
+for (i=0; i< 2;i++) {
     eventCards.push(new card("You found some goodies.", "Draw 2 Item Cards."));}
 for (i=0; i< 1;i++) {
     eventCards.push(new card("You found some goodies.", "Draw 3 Item Cards."));}
@@ -83,9 +99,9 @@ for (i=0; i< 1;i++) {
 for (i=0; i< 4;i++) {
     eventCards.push(new card("You find Officer Jenny eating a donut on the sidewalk.", "You tell her to go anywhere and take care of a Team Rocket member."));}
 for (i=0; i< 2;i++) {
-    eventCards.push(new card("You see a strange Pokemon...", "Fight one of the legendary Pokemon."));}
+    eventCards.push(new card("You see a strange Pokemon...", "You may fight one of the legendary Pokemon. Else, draw another event card."));}
 for (i=0; i< 2;i++) {
-    eventCards.push(new card("You see a rare Pokemon...", "Fight one of the rare Pokemon."));}
+    eventCards.push(new card("You see a rare Pokemon...", "You may fight one of the rare Pokemon. Else, draw another event card."));}
 function drawEvent() {
     cardText.value=(drawCard(eventCards));
 }
@@ -103,10 +119,24 @@ for (i=0; i< 3;i++) {
     environmentCards.push(new card("Sunshine", "Players in Area E lose one fatigue counter."));}
 for (i=0; i< 3;i++) {
     environmentCards.push(new card("Sunshine", "Players in Area F lose one fatigue counter."));}
+for (i=0; i< 2;i++) {
+    environmentCards.push(new card("Thunderstorm", "Players in Area A and D gain one fatigue counter."));}
+for (i=0; i< 2;i++) {
+    environmentCards.push(new card("Thunderstorm", "Players in Area B and E gain one fatigue counter."));}
+for (i=0; i< 2;i++) {
+    environmentCards.push(new card("Thunderstorm", "Players in Area C and F gain one fatigue counter."));}
+for (i=0; i< 2;i++) {
+    environmentCards.push(new card("Thunderstorm", "Players in Area A and C gain one fatigue counter."));}
+for (i=0; i< 2;i++) {
+    environmentCards.push(new card("Thunderstorm", "Players in Area D and F gain one fatigue counter."));}
+for (i=0; i< 2;i++) {
+    environmentCards.push(new card("Thunderstorm", "Players in Area C and E gain one fatigue counter."));}
 for (i=0; i< 1;i++) {
-    environmentCards.push(new card("Mewtwo Sleeps. All players feel less pressure.", "All Players lose one fatigue counter."));}
+    environmentCards.push(new card("All players feel less pressure. All pokemon have increased vigour. It's almost as if Mewtwo is sleeping...", "All Players lose one fatigue counter."));}
+for (i=0; i< 1;i++) {
+    environmentCards.push(new card("You catch a glimpse of a magnificent bird flying alongside a rainbow across the sky. There is no data in the Pokedex.", "All Players lose all fatigue counters."));}
 function drawEnvironment() {
-    cardText.value=(drawCard(environmentCards) + "\nA peaceful spot appears at position " + Math.floor(Math.random()*44) + ".");
+    cardText.value=(drawCard(environmentCards) + " A peaceful spot appears at position " + Math.floor(Math.random()*44) + ". A time machine was unearthed at position " + Math.floor(Math.random()*44) + ".");
 }
 
 
